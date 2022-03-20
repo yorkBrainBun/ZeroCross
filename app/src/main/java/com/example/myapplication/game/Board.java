@@ -7,7 +7,7 @@ public class Board {
     boolean isWon;
 
     Board(){
-        tictactoeBoard = new int[][]{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
+        tictactoeBoard = new int[][]{{0,0,0}, {0,0,0}, {0,0,0}};
     }
 
     //0 = O, 1 = X, -1 = empty
