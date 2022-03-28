@@ -3,7 +3,7 @@ package com.example.myapplication.game;
 public class UltimateBoard extends Board{
     Board[][] board;
 
-    UltimateBoard(){
+    public UltimateBoard(){
         board = new Board[3][3];
     }
 
