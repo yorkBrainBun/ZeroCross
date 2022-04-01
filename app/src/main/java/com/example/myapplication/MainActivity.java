@@ -2,17 +2,11 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.Button;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button leaderboard = findViewById(R.id.LeaderBoard);
+        leaderboard.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, MainActivity2.class)));
+
+        Button game = findViewById(R.id.button6);
+        game.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, BoardActivity.class)));
     }
 
-    public void toLeaderBoard(View view) {
-        setContentView(R.layout.activity_main2);
-    }
 }
 

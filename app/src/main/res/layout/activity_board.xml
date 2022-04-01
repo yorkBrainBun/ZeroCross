@@ -43,19 +43,18 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/b0000"
-                        style="@style/Widget.AppCompat.Button.Colored"
+                        style="@style/Widget.AppCompat.Button.Small"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:autoText="true"
                         android:background="#E3E3E3"
                         android:backgroundTint="#373737"
-                        android:onClick="onClick"
-                        android:textAlignment="center"
-                        android:textSize="12sp"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        android:elegantTextHeight="true"
+                        android:text="x"
+                        android:textAllCaps="false"
+                        android:textSize="16sp" /> />
 
                     <Button
                         android:id="@+id/b0010"
@@ -65,8 +64,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0020"
@@ -76,8 +74,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -93,8 +90,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0011"
@@ -104,8 +100,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0021"
@@ -115,8 +110,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -132,8 +126,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0012"
@@ -143,8 +136,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0022"
@@ -154,8 +146,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
 
@@ -179,8 +170,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1010"
@@ -190,8 +180,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1020"
@@ -201,8 +190,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -218,8 +206,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1011"
@@ -229,8 +216,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1021"
@@ -240,8 +226,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -257,8 +242,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1012"
@@ -268,8 +252,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1022"
@@ -279,8 +262,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
 
@@ -304,8 +286,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2010"
@@ -315,8 +296,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2020"
@@ -326,8 +306,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -343,8 +322,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2011"
@@ -354,8 +332,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2021"
@@ -365,8 +342,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -382,8 +358,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2012"
@@ -393,8 +368,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2022"
@@ -404,8 +378,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
         </TableRow>
@@ -435,8 +408,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0110"
@@ -446,8 +418,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0120"
@@ -457,8 +428,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -474,8 +444,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0111"
@@ -485,8 +454,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0121"
@@ -496,8 +464,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -513,8 +480,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0112"
@@ -524,8 +490,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0122"
@@ -535,8 +500,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
 
@@ -560,8 +524,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1110"
@@ -571,8 +534,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1120"
@@ -582,8 +544,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -599,8 +560,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1111"
@@ -610,8 +570,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1121"
@@ -621,8 +580,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -638,8 +596,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1112"
@@ -649,8 +606,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1122"
@@ -660,8 +616,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
 
@@ -685,8 +640,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2110"
@@ -696,8 +650,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2120"
@@ -707,8 +660,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -724,8 +676,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2111"
@@ -735,8 +686,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2121"
@@ -746,8 +696,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -763,8 +712,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2112"
@@ -774,8 +722,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2122"
@@ -785,8 +732,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
         </TableRow>
@@ -816,8 +762,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0210"
@@ -827,8 +772,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0220"
@@ -838,8 +782,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -855,8 +798,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0211"
@@ -866,8 +808,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0221"
@@ -877,8 +818,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -894,8 +834,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0212"
@@ -905,8 +844,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b0222"
@@ -916,8 +854,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
 
@@ -941,8 +878,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1210"
@@ -952,8 +888,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1220"
@@ -963,8 +898,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -980,8 +914,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1211"
@@ -991,8 +924,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1221"
@@ -1002,8 +934,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -1019,8 +950,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1212"
@@ -1030,8 +960,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b1222"
@@ -1041,8 +970,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
 
@@ -1066,8 +994,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2210"
@@ -1077,8 +1004,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2220"
@@ -1088,8 +1014,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -1105,8 +1030,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2211"
@@ -1116,8 +1040,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2221"
@@ -1127,8 +1050,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
 
                 <TableRow
@@ -1144,8 +1066,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2212"
@@ -1155,8 +1076,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
 
                     <Button
                         android:id="@+id/b2222"
@@ -1166,8 +1086,7 @@
                         android:layout_margin="5px"
                         android:layout_weight="1"
                         android:background="#E3E3E3"
-                        android:backgroundTint="#373737"
-                        android:onClick="onClick" />
+                        android:backgroundTint="#373737" />
                 </TableRow>
             </TableLayout>
         </TableRow>
@@ -1184,5 +1103,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.286" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back To Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
