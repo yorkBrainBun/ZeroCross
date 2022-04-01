@@ -16,10 +16,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button leaderboard = findViewById(R.id.LeaderBoard);
-        leaderboard.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, MainActivity2.class)));
+        leaderboard.setOnClickListener(view ->
+                startActivity(new Intent(MainActivity.this, MainActivity2.class))
+        );
 
         Button game = findViewById(R.id.button6);
-        game.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, BoardActivity.class)));
+        game.setOnClickListener(view ->
+                startActivity(new Intent(MainActivity.this, BoardActivity.class))
+        );
     }
 
 }
