@@ -9,7 +9,8 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    private Button HTP;
+    private Button loginClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,30 @@ public class MainActivity extends AppCompatActivity {
         game.setOnClickListener(view ->
                 startActivity(new Intent(MainActivity.this, BoardActivity.class))
         );
+
+        HTP =(Button) findViewById(R.id.button7);
+        HTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHowToPlay();
+            }
+        });
+
+        loginClick =(Button) findViewById(R.id.button6);
+        loginClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLogin();
+            }
+        });
+    }
+    public void openHowToPlay(){
+        Intent intent = new Intent(this, HowToPlay.class);
+        startActivity(intent);
+    }
+    public void openLogin(){
+        Intent intent = new Intent(this, Login.class );
+        startActivity(intent);
     }
 
 }
