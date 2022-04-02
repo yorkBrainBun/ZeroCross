@@ -4,7 +4,7 @@ public class Board {
     int[][] tictactoeBoard;
     int lastX;
     int lastY;
-    boolean isWon;
+    boolean isWon = false;
 
     Board(){
         tictactoeBoard = new int[][]{{0,0,0}, {0,0,0}, {0,0,0}};
@@ -20,7 +20,11 @@ public class Board {
     }
 
     public int getPiece(int positionX, int positionY){
-        return tictactoeBoard[positionY][positionX];
+        return tictactoeBoard[positionX][positionY];
+    }
+
+    public void setWon(){
+        isWon = true;
     }
 
     public boolean isWon() {
