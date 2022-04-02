@@ -25,5 +25,6 @@
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="172dp"
         android:onClick="load"
+        android:backgroundTint="#0B0B0B"
         android:text="Leaderboard" />
 </RelativeLayout>

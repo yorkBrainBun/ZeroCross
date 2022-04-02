@@ -8,11 +8,13 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="320dp"
-        android:layout_height="493dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="366dp"
+        android:layout_height="592dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="How to play \n\nUltimate tic tac toe is played on a 3 by 3 grid, with a smaller 3 by 3 grid in each square, for a total of a 9 by 9 gridded area. Players alternate placing X’s or O’s in empty squares. \n\nOn the first turn, players can put their symbol on any square \n\nOn the following turns, they must play anywhere on the smaller grid that corresponds to where the last symbol was placed \n\nEx. if player X puts his symbol in the middle grid, top left, then player O must play in the grid in the top left \n\nIf a player is sent to a grid that is filled, they are allowed to play in any empty square they want \n\nWhen a player connects 3 in a row in a small grid, that grid is considered won by that player. \n\nIf a 3 grids in a row are won, then that player is the winner of the game. "
+        android:textColor="#131313"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,9 +25,11 @@
         android:text="back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#0B0B0B"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

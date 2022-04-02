@@ -13,6 +13,7 @@
         android:layout_marginTop="252dp"
         android:text="Player Wins"
         android:textSize="48sp"
+        android:textColor="#131313"
         app:layout_constraintBottom_toTopOf="@+id/toHomefromWin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +28,7 @@
         app:layout_constraintBottom_toTopOf="@+id/toHomefromWin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        android:backgroundTint="#0B0B0B"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/winDisplay"
         app:layout_constraintVertical_bias="0.83" />
@@ -37,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="220dp"
         android:text="Main Menu"
+        android:backgroundTint="#0B0B0B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
