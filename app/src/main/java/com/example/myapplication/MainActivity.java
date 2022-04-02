@@ -9,7 +9,7 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    private Button HTP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,18 @@ public class MainActivity extends AppCompatActivity {
         game.setOnClickListener(view ->
                 startActivity(new Intent(MainActivity.this, BoardActivity.class))
         );
+
+        HTP =(Button) findViewById(R.id.button7);
+        HTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHowToPlay();
+            }
+        });
+    }
+    public void openHowToPlay(){
+        Intent intent = new Intent(this, HowToPlay.class);
+        startActivity(intent);
     }
 
 }
