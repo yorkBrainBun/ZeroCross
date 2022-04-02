@@ -21,12 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MainActivity2.class))
         );
 
-        Button game = findViewById(R.id.button6);
-        game.setOnClickListener(view ->
-                startActivity(new Intent(MainActivity.this, BoardActivity.class))
-        );
-
-        HTP =(Button) findViewById(R.id.button7);
+        HTP = findViewById(R.id.howtoplay);
         HTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        loginClick =(Button) findViewById(R.id.button6);
+        loginClick = findViewById(R.id.button6);
         loginClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openLogin(){
-        Intent intent = new Intent(this, Login.class );
+        Intent intent = new Intent(this, PlayerOneLogin.class );
         startActivity(intent);
     }
 

@@ -13,27 +13,31 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Login extends AppCompatActivity {
+public class PlayerOneLogin extends AppCompatActivity {
 
     private static final String FILE_NAME= "leaderboard.txt";
 
     EditText mEditText;
     private Button goBack;
+    private Button login;
+    private Button guest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mEditText = findViewById(R.id.edit_text);
-
-        goBack =(Button) findViewById(R.id.button2);
-        goBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goMainActivity();
-            }
-
+        login = findViewById(R.id.login);
+        login.setOnClickListener(view -> {
+            playerTwoLogin(view);
         });
+
+        guest = findViewById(R.id.guest);
+        guest.setOnClickListener(view -> guestLogin());
+
+
+        goBack =findViewById(R.id.back);
+        goBack.setOnClickListener(view -> goMainActivity());
     }
 
     public void save(View v){
@@ -59,14 +63,26 @@ public class Login extends AppCompatActivity {
                 }
             }
         }
+    }
 
-
-
+    public void guestLogin(){
+        Intent intent = new Intent(this, PlayerTwoLogin.class);
+        intent.putExtra("One", (String) null);
+        startActivity(intent);
     }
 
     public void goMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
+    }
+
+    public void playerTwoLogin(View view){
+        if(!mEditText.getText().toString().equals("")){
+            Intent intent = new Intent(this, PlayerTwoLogin.class);
+            intent.putExtra("One", mEditText.getText().toString());
+            save(view);
+            startActivity(intent);
+        }
     }
 }

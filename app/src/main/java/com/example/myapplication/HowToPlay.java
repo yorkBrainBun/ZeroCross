@@ -15,7 +15,7 @@ public class HowToPlay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_to_play);
-        backroom =(Button) findViewById(R.id.button3);
+        backroom = findViewById(R.id.button2);
         backroom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

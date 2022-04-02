@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".Login"
+            android:name=".WinScreen"
+            android:exported="false" />
+        <activity
+            android:name=".PlayerTwoLogin"
+            android:exported="false" />
+        <activity
+            android:name=".PlayerOneLogin"
             android:exported="false" />
         <activity
             android:name=".HowToPlay"

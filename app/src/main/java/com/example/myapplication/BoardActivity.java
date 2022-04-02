@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,11 +16,14 @@ import com.example.myapplication.game.UltimateBoard;
 public class BoardActivity extends AppCompatActivity {
     private UltimateBoard board;
     Button [][][][] buttons = new Button[3][3][3][3];
+    Button button;
     int lastX = -1;
     int lastY = -1;
     TextView turnBox;
     boolean placeAnywhere = true;
     int turn;
+    String playerOne = "Guest 1";
+    String playerTwo = "Guest  2";
 
     //1 = O, -1 = X, 0 = empty
 
@@ -28,14 +32,31 @@ public class BoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
         board = new UltimateBoard();
-        turnBox = (TextView) findViewById(R.id.turnview);
+        turnBox = findViewById(R.id.turnview);
+        button = findViewById(R.id.toHome);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BoardActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Bundle extras = getIntent().getExtras();
+        if(extras.get("One") != null){
+            playerOne = extras.getString("One");
+        }
+        if( null != extras.getString("Two")){
+            playerTwo = extras.getString("Two");
+        }
+
+            //The key argument here must match that used in the other activity
+
+        TextView versusText = findViewById(R.id.versus);
+        versusText.setText(playerOne + " vs " + playerTwo);
 
         turn = 1;
-        if(turn == -1){
-            turnBox.setText("Turn X");
-        } else{
-            turnBox.setText("Turn O");
-        }
+        turnBox.setText(playerOne + " Turn O");
 
         setUpButtons();
     }
@@ -47,7 +68,7 @@ public class BoardActivity extends AppCompatActivity {
                 for(int x2 = 0; x2 < 3; x2++){
                     for(int y2 = 0; y2 < 3; y2++){
                         temp = "b" + x1 + y1 + x2 + y2;
-                        buttons[y1][x1][y2][x2] = (Button) findViewById(getResources().getIdentifier(temp, "id", getPackageName()));
+                        buttons[y1][x1][y2][x2] = findViewById(getResources().getIdentifier(temp, "id", getPackageName()));
                         buttons[y1][x1][y2][x2].setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -58,7 +79,6 @@ public class BoardActivity extends AppCompatActivity {
                                 int y2 = Integer.parseInt(String.valueOf(viewID.charAt(3)));
                                 int x2 = Integer.parseInt(String.valueOf(viewID.charAt(4)));
 
-                                System.out.println(x1 +""+ y1 +x2 + y2);
                                 if(placeAnywhere ||(x1 == lastX && y1 == lastY)&&board.getBoard(x1,y1).getPiece(x2,y2) == 0){
                                     board.getBoard(x1,y1).setPiece(x2,y2,turn);
 
@@ -89,7 +109,7 @@ public class BoardActivity extends AppCompatActivity {
     }
 
     private void checkWin(int x, int y) {
-        if (CheckWin.checkWin(board.getBoard(x,y))){
+        if (CheckWin.checkWin(board.getBoard(x,y)) && !board.getBoard(x,y).isWon()){
             board.getBoard(x,y).setWon();
             board.setPiece(x,y,turn);
             for(int i = 0; i < 3; i++){
@@ -98,7 +118,15 @@ public class BoardActivity extends AppCompatActivity {
                 }
             }
             if(CheckWin.checkWin(board)){
-                turnBox.setText("Won");
+                Intent intent = new Intent(this, WinScreen.class);
+                if(turn == 1){
+                    intent.putExtra("Winner",playerOne);
+                    intent.putExtra("Loser",playerTwo);
+                }else{
+                    intent.putExtra("Winner",playerTwo);
+                    intent.putExtra("Loser",playerOne);
+                }
+                startActivity(intent);
             }
         }
 
@@ -128,13 +156,12 @@ public class BoardActivity extends AppCompatActivity {
     }
 
     public void piecePlaced(Button button){
-        if(turn == -1){
-            turnBox.setText("Turn O");
-            button.setText("X");
-        } else{
-            turnBox.setText("Turn X");
+        if(turn == 1){
+            turnBox.setText(playerTwo + " Turn X");
             button.setText("O");
+        } else{
+            turnBox.setText(playerOne + " Turn O");
+            button.setText("X");
         }
-
     }
 }

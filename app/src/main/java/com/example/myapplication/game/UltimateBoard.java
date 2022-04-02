@@ -17,12 +17,9 @@ public class UltimateBoard extends Board{
     }
 
     public boolean isAllFull(){
-        if(boards[0][0].isFull() && boards[0][1].isFull() && boards[0][2].isFull() &&
+        return boards[0][0].isFull() && boards[0][1].isFull() && boards[0][2].isFull() &&
                 boards[1][0].isFull() && boards[1][1].isFull() && boards[1][2].isFull() &&
-                boards[2][0].isFull() && boards[2][1].isFull() && boards[2][2].isFull()){
-            return true;
-        }
-        return false;
+                boards[2][0].isFull() && boards[2][1].isFull() && boards[2][2].isFull();
     }
 
     public void print(){
