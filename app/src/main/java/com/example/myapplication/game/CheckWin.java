@@ -10,10 +10,7 @@ public class CheckWin {
                         if(checkTopRow(board)||checkLeftColumn(board)||checkDownDiagonal(board)){return true;}
                         break;
                     case 1:
-                        System.out.println("Made It");
                         if(checkTopRow(board)||checkMiddleColumn(board)){
-                            System.out.println(checkTopRow(board));
-                            System.out.println(checkMiddleColumn(board));
                             return true;}
 
                         break;

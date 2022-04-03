@@ -131,7 +131,10 @@ public class BoardActivity extends AppCompatActivity {
         }
 
         if(board.isAllFull()){
-            turnBox.setText("Tied");
+            Intent intent = new Intent(this, Draw.class);
+            intent.putExtra("Two",playerOne);
+            intent.putExtra("One",playerTwo);
+            startActivity(intent);
         }
     }
 

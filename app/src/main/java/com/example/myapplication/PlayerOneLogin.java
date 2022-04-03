@@ -9,13 +9,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class PlayerOneLogin extends AppCompatActivity {
 
     private static final String FILE_NAME= "leaderboard.txt";
+    private static final String SCORE_FILE = "score.txt";
 
     EditText mEditText;
     private Button goBack;
@@ -29,7 +35,11 @@ public class PlayerOneLogin extends AppCompatActivity {
         mEditText = findViewById(R.id.edit_text);
         login = findViewById(R.id.login);
         login.setOnClickListener(view -> {
-            playerTwoLogin(view);
+            try {
+                playerTwoLogin(view);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         });
 
         guest = findViewById(R.id.guest);
@@ -41,15 +51,35 @@ public class PlayerOneLogin extends AppCompatActivity {
     }
 
     public void save(View v){
+        boolean duplicate = false;
         String text = mEditText.getText().toString();
         FileOutputStream fos = null;
+        FileInputStream fis = null;
+        FileOutputStream fos1 = null;
 
         try {
-            fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
-            fos.write(text.getBytes());
+            fis = openFileInput(FILE_NAME);
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader br = new BufferedReader(isr);
+            String temp;
+            while ((temp = br.readLine()) != null){
+                if(temp.equals(text)){
+                    System.out.println("User Already Exists");
+                    duplicate = true;
+                }
+            }
+            if(!duplicate){
+                fos1 = openFileOutput(SCORE_FILE, MODE_APPEND);
+                fos = openFileOutput(FILE_NAME, MODE_APPEND);
 
-            mEditText.getText().clear();
-            Toast.makeText(this, "Saved to" +getFilesDir() + "/" + FILE_NAME, Toast.LENGTH_LONG).show();
+                PrintWriter pw1 = new PrintWriter(fos1, true);
+                pw1.println(0);
+                pw1.close();
+
+                PrintWriter pw = new PrintWriter(fos, true);
+                pw.println(text);
+                pw.close();
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -77,7 +107,7 @@ public class PlayerOneLogin extends AppCompatActivity {
 
     }
 
-    public void playerTwoLogin(View view){
+    public void playerTwoLogin(View view) throws FileNotFoundException {
         if(!mEditText.getText().toString().equals("")){
             Intent intent = new Intent(this, PlayerTwoLogin.class);
             intent.putExtra("One", mEditText.getText().toString());

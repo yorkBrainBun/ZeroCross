@@ -7,15 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 public class PlayerTwoLogin extends AppCompatActivity {
 
     private static final String FILE_NAME= "leaderboard.txt";
+    private static final String SCORE_FILE = "score.txt";
+
 
     EditText mEditText;
     private Button goBack;
@@ -45,15 +50,35 @@ public class PlayerTwoLogin extends AppCompatActivity {
     }
 
     public void save(View v){
+        boolean duplicate = false;
         String text = mEditText.getText().toString();
         FileOutputStream fos = null;
+        FileInputStream fis = null;
+        FileOutputStream fos1 = null;
 
         try {
-            fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
-            fos.write(text.getBytes());
+            fis = openFileInput(FILE_NAME);
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader br = new BufferedReader(isr);
+            String temp;
+            while ((temp = br.readLine()) != null){
+                if(temp.equals(text)){
+                    System.out.println("User Already Exists");
+                    duplicate = true;
+                }
+            }
+            if(!duplicate){
+                fos1 = openFileOutput(SCORE_FILE, MODE_APPEND);
+                fos = openFileOutput(FILE_NAME, MODE_APPEND);
 
-            mEditText.getText().clear();
-            Toast.makeText(this, "Saved to" +getFilesDir() + "/" + FILE_NAME, Toast.LENGTH_LONG).show();
+                PrintWriter pw1 = new PrintWriter(fos1, true);
+                pw1.println(0);
+                pw1.close();
+
+                PrintWriter pw = new PrintWriter(fos, true);
+                pw.println(text);
+                pw.close();
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

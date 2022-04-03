@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button leaderboard = findViewById(R.id.LeaderBoard);
         leaderboard.setOnClickListener(view ->
-                startActivity(new Intent(MainActivity.this, MainActivity2.class))
+                startActivity(new Intent(MainActivity.this, LeaderBoard.class))
         );
 
         HTP = findViewById(R.id.howtoplay);
