@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".LeaderBoard">
 
     <Button
         android:id="@+id/goHome"
@@ -15,6 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="169dp"
+        android:backgroundTint="#0B0B0B"
         android:text="Home" />
 
     <TextView
@@ -22,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/top3"
+        android:textColor="#131313"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="206dp"
         android:layout_marginBottom="60dp" />
@@ -30,6 +32,7 @@
         android:id="@+id/top5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#131313"
         android:layout_above="@+id/goHome"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="206dp"
@@ -40,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/top5"
+        android:textColor="#131313"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="206dp"
         android:layout_marginBottom="61dp" />
@@ -49,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/top4"
+        android:textColor="#131313"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="206dp"
         android:layout_marginBottom="61dp" />
@@ -58,6 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/top2"
+        android:textColor="#131313"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="206dp"
         android:layout_marginBottom="61dp" />
