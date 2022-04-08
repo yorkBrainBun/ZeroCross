@@ -2,8 +2,10 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +34,16 @@ public class LeaderBoard extends AppCompatActivity {
             tops[i-1] = findViewById(getResources().getIdentifier("top" + i, "id", getPackageName()));
         }
         load();
+
+        Button button = findViewById(R.id.goHome);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LeaderBoard.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
